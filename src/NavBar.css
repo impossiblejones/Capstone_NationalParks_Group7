@@ -1,7 +1,10 @@
 .test {
-	background-color: aqua;
+  background-color: aqua;
 }
 
+.NavBar ul {
+  display: flex;
+}
 
 .navigation-links,
 h1 {
