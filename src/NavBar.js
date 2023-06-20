@@ -1,4 +1,6 @@
 import "./NavBar.css"
+import "./LinkedItem"
+import LinkedItem from "./LinkedItem";
 
 const NavBar = () => {
 	return (
@@ -10,13 +12,13 @@ const NavBar = () => {
 					<p>LOGO HERE</p>
 				</li>
 				<li>
-					<p>Home</p>
+					<LinkedItem linkText={"Home"} isActive={true} />
 				</li>
 				<li>
-					<p>Mountains</p>
+					<LinkedItem linkText={"Mountains"} isActive={false} />
 				</li>
 				<li>
-					<p>National Parks</p>
+					<LinkedItem linkText={"National Parks"} isActive={false} />
 				</li>
 			</ul>
 		</header>
