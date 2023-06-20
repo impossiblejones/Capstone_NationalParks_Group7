@@ -1,17 +1,11 @@
-.test {
-  background-color: aqua;
+.NavBar li {
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .NavBar ul {
   display: flex;
-}
-
-.navigation-links,
-h1 {
-  display: inline
-}
-
-.navigation-links li {
-  display: inline-block;
-  margin-right: 18px
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 20px;
 }

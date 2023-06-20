@@ -8,11 +8,8 @@ import PageLogo from "./PageLogo";
 const NavBar = () => {
 	return (
 		<header className='NavBar'>
-			<h2 className='test'>Proof Is In The Pudding</h2>
-
 			<ul>
 				<li>
-					<p>LOGO HERE</p>
 					<PageLogo logoNum={0} />
 				</li>
 				<li>
