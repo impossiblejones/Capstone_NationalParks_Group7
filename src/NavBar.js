@@ -13,8 +13,7 @@ const NavBar = () => {
 			<ul>
 				<li>
 					<p>LOGO HERE</p>
-					<img src="" alt=""/>
-					<PageLogo  logo={"../images/Logo/LOGO MOUNTAINS.png"} alt={"Mountain"}                                />
+					<PageLogo logoNum={0} />
 				</li>
 				<li>
 					<LinkedItem linkText={"Home"} isActive={true} />

@@ -1,3 +1,14 @@
 .test {
 	background-color: aqua;
 }
+
+
+.navigation-links,
+h1 {
+  display: inline
+}
+
+.navigation-links li {
+  display: inline-block;
+  margin-right: 18px
+}

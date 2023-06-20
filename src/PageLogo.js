@@ -1,20 +1,17 @@
 import "./PageLogo.css"
 
 
-const PageLogo = ({logo, alt}) => {
-    console.log(logo)
-    
-    return (
+const PageLogo = ({ logoNum }) => {
 
-        <div className="PageLogo">
+	return (
+		logoNum === 1
+			? <img src="./images/logo/logoMountains.png" alt="Mountain Logo" />
+			: <img src="./images/logo/logoNationalParks.png" alt="National Park Logo" />
 
-            <img src={logo} alt={alt} />
+		// <div className="PageLogo">
+		//   <img src={logo} alt={alt} />
+		// </div>
 
-
-        </div>
-
-    )
-
-
+	)
 }
 export default PageLogo;
