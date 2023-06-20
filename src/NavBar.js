@@ -1,6 +1,9 @@
 import "./NavBar.css"
 import "./LinkedItem"
 import LinkedItem from "./LinkedItem";
+import PageLogo from "./PageLogo";
+
+
 
 const NavBar = () => {
 	return (
@@ -10,6 +13,8 @@ const NavBar = () => {
 			<ul>
 				<li>
 					<p>LOGO HERE</p>
+					<img src="" alt=""/>
+					<PageLogo  logo={"../images/Logo/LOGO MOUNTAINS.png"} alt={"Mountain"}                                />
 				</li>
 				<li>
 					<LinkedItem linkText={"Home"} isActive={true} />
