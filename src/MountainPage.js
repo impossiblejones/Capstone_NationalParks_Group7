@@ -1,7 +1,7 @@
 import './MountainPage.css';
 import DropDownFilterForm from "./DropDownFilterForm.js";
 import { useState, useEffect } from "react"
-
+import MountainCard from './MountainCard';
 
 const Mountain = () => {
 	const [mountainData, setMountainData] = useState([]);
@@ -18,9 +18,10 @@ const Mountain = () => {
 
 	return (
 		// <h2> MountainPage</h2>
-		<DropDownFilterForm data={mountainData} />
-
-
+		<section>
+			<DropDownFilterForm data={mountainData} />
+			<MountainCard />
+		</section>
 	);
 }
 
