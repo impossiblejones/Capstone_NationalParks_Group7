@@ -20,6 +20,7 @@ const Mountain = () => {
 		// <h2> MountainPage</h2>
 		<section>
 			<DropDownFilterForm data={mountainData} />
+			<br></br>
 			<MountainCard />
 		</section>
 	);
