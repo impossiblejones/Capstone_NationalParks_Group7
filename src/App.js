@@ -5,17 +5,15 @@ import NavBar from './NavBar.js';
 function App() {
   return (
     <div className="App">
-			
-				<NavBar/>
-			
-        <HomePage/>
 
-
-
+      <NavBar />
+      <body>
+        <HomePage />
+      </body>
 
 
     </div>
-    
+
   );
 }
 

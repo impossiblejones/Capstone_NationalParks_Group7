@@ -1,4 +1,19 @@
-a {
+.LinkedItem {
     color: black;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.LinkedItem::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    margin-top: 5px;
+    transition: width 0.5s ease-out;
+}
+
+.LinkedItem:hover::after {
+    width: 100%;
 }
