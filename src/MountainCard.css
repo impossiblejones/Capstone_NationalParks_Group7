@@ -1,0 +1,51 @@
+.test {
+	margin: 0px;
+padding: 0px;
+border: 0px;
+}
+
+.MountainCard {
+	
+	border: solid;
+	padding: 10px;
+	max-width: 450px;
+	align-items: center;
+
+}
+
+.MountainCard>div {
+	display: block;
+	position: relative;
+
+	border: solid;
+	border: 0px;
+
+	margin: 0px;
+	padding: 0px;
+
+}
+.MountainCard h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	/* width: 100%; */
+	/* text-align: center; */
+	transform: translate(-50%,-50%);
+	background-color: rgba(0,0,0,.3);
+	color: white;
+	padding: 10px;
+	border-radius: 8px;
+	
+	
+}
+
+.MountainCard img {
+	width: 100%;
+	/* border: 10px; */
+	/* margin: 10px; */
+	/* padding: 10px; */
+	object-fit: cover;
+	border-radius: 8px;
+
+}
