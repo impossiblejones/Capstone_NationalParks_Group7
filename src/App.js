@@ -6,18 +6,19 @@ import MountainPage from './MountainPage';
 // import useState from React
 
 function App() {
-	return (
-		<div className="App">
+  return (
+    <div className="App">
 
-			<NavBar />
-			<body>
-				<HomePage />
-			</body>
+      <NavBar />
+      <main>
+        {/* <HomePage /> */}
+        <MountainPage />
+      </main>
 
-			<MountainPage />
-		</div>
 
-	);
+    </div>
+
+  );
 }
 
 export default App;
