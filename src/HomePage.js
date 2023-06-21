@@ -1,7 +1,23 @@
 import "./HomePage.css"
 
-const HomePage=() =>{
-    return(<h2>Hello World</h2>);
+
+
+const HomePage = () => {
+    return (
+        <header>
+           
+            <img src="./images/galaxy/galaxy.jpg"/>
+            <div class="main"></div>
+
+
+
+
+        </header>
+
+
+
+
+    );
 }
 
 export default HomePage;

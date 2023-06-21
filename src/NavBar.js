@@ -7,7 +7,7 @@ import PageLogo from "./PageLogo";
 
 const NavBar = () => {
 	return (
-		<header className='NavBar'>
+		<nav className='NavBar'>
 			<ul>
 				<li>
 					<PageLogo logoNum={0} />
@@ -22,7 +22,7 @@ const NavBar = () => {
 					<LinkedItem linkText={"National Parks"} isActive={false} />
 				</li>
 			</ul>
-		</header>
+		</nav>
 	);
 }
 
