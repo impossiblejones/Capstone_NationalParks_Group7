@@ -2,17 +2,46 @@ import './App.css';
 import HomePage from './HomePage';
 import NavBar from './NavBar.js';
 import MountainPage from './MountainPage';
-
+import { useState } from 'react';
+import NationalParksPage from './NationalParksPage';
 // import useState from React
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Home")
+  const changePageHandler = event => {
+    event.preventDefault()
+    setCurrentPage(event.target.name)
+
+  }
+
+
+
+  console.log(currentPage)
   return (
     <div className="App">
 
-      <NavBar />
+      <NavBar changePageHandler={changePageHandler} />
       <main>
-        {/* <HomePage /> */}
-        <MountainPage />
+        {(() => {
+          switch (currentPage) {
+            case 'Home':
+              return <HomePage />
+            case 'Mountains':
+              return <MountainPage />
+            case 'National Parks':
+              return <NationalParksPage />
+
+            default:
+              return <HomePage />
+          }
+        })()}
+
+
+
+
+
+
+
       </main>
 
 

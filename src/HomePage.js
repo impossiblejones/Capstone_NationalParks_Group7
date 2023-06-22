@@ -6,7 +6,7 @@ const HomePage = () => {
 		<>
 			<header>
 				<img src="./images/galaxy/galaxy.jpg" alt="Galaxy with stars" />
-				<div class="main">
+				<div className="main">
 				</div>
 			</header>
 

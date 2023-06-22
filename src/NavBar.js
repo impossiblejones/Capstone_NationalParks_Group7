@@ -5,7 +5,7 @@ import PageLogo from "./PageLogo";
 
 
 
-const NavBar = () => {
+const NavBar = ({changePageHandler}) => {
 	return (
 		<nav className='NavBar'>
 			<ul>
@@ -13,13 +13,13 @@ const NavBar = () => {
 					<PageLogo logoNum={0} />
 				</li>
 				<li>
-					<LinkedItem linkText={"Home"} isActive={true} />
+					<LinkedItem linkText={"Home"} isActive={true} changePageHandler={changePageHandler} />
 				</li>
 				<li>
-					<LinkedItem linkText={"Mountains"} isActive={false} />
+					<LinkedItem linkText={"Mountains"} isActive={false} changePageHandler={changePageHandler} />
 				</li>
 				<li>
-					<LinkedItem linkText={"National Parks"} isActive={false} />
+					<LinkedItem linkText={"National Parks"} isActive={false} changePageHandler={changePageHandler} />
 				</li>
 			</ul>
 		</nav>
