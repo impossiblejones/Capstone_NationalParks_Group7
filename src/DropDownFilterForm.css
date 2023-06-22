@@ -6,7 +6,13 @@
 }
 
 label {
-	/* font-size: 15px; */
-	font-size: 1.1 em;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+}
 
+select {
+	font-size: 15px;
+	margin-bottom: 10px;
 }

@@ -12,16 +12,30 @@ const Mountain = () => {
 			.then(response => setMountainData(response.mountains))
 	}
 
+	const [mountain, setMountain] = useState('');
+	const mountainChangeHandler = (event) => {
+		setMountain(event.target.value)
+	}
+	const [filterMountainData, setFilterMountainData] = useState([]);
+	useEffect(() => {
+		setFilterMountainData(mountainData.find(mnt => mnt.name === mountain))
+	}, [mountain]);
+
 	useEffect(() => {
 		getMountainData("./data/mountains.json")
 	}, [])
 
 	return (
-		// <h2> MountainPage</h2>
 		<section>
-			<DropDownFilterForm data={mountainData} />
-			<br></br>
-			<MountainCard />
+			<DropDownFilterForm
+				data={mountainData}
+				mountain={mountain}
+				mountainChangeHandler={mountainChangeHandler}
+			/>
+
+			<MountainCard
+				data={filterMountainData}
+			/>
 		</section>
 	);
 }
