@@ -20,7 +20,6 @@ const Mountain = () => {
 	const mountainChangeHandler = (event) => {
 		setMountain(event.target.value)
 		setFilterMountainData(mountainData.find(mnt => mnt.name === event.target.value))
-
 	}
 	const [filterMountainData, setFilterMountainData] = useState({});
 
