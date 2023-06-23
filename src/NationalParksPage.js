@@ -57,12 +57,15 @@ const NationalParksPage = () => {
 			<form onSubmit={submitParksFilterHandler}>
 				<label htmlFor="StateList">State</label>
 				<select name='StateList' id='StateList' onChange={changeFilterHandler}>
+					{<option value="" selected disabled hidden>All States</option>}
 					{stateList.map(state => <option key={state} value={state}>{state}</option>)}
 				</select>
 
 				<label htmlFor="TypeList">Type</label>
 				<select name='TypeList' id='TypeList' onChange={changeFilterHandler}>
-					{parkTypeList.map(type => <option key={type} value={type}>{type}</option>)}
+					{<option value="" selected disabled hidden>All Types</option>}
+					{(parkTypeList.map(type => <option key={type} value={type}>{type}</option>))}
+
 				</select>
 				<input type='submit' />
 			</form>
