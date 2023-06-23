@@ -1,30 +1,68 @@
 import './NationalParksPage.css';
+import { useState, useEffect } from 'react';
 
 const NationalParksPage = () => {
 
+	const [stateList, setStateList] = useState([]);
+	const [parkTypeList, setParkTypeList] = useState([]);
+	const [nationalParksData, setNationalsParksData] = useState({})
 
-	// const StateList = ({ data = [], mountain, mountainChangeHandler }) => {
-	// 	const mountainNames = data.map(item => item.name).sort();
+	const getListData = (path, listSetFunc) => {
+		fetch(path)
+			.then(response => response.json())
+			.then(response => listSetFunc(response))
+	}
+
+	const getNationalParksData = (path) => {
+		fetch(path)
+			.then(response => response.json())
+			.then(response => response.parks)
+			.then(response => setNationalsParksData(response))
+	}
+	useEffect(() => {
+		getListData('./data/parktypes.json', setParkTypeList)
+		getListData('./data/locations.json', setStateList)
+		getNationalParksData('./data/nationalparks.json')
+
+	}, [])
 
 
+	const submitParksFilterHandler = event => {
+		event.preventDefault()
+	}
 
+	// nationalParksData[0] && console.log(Object.keys(nationalParksData[0]))
 
 	return (
 		<>
-			<h2>NationalParksPage</h2>
-			<form>
+			<h2>National Parks</h2>
+			<form onSubmit={submitParksFilterHandler}>
 				<label htmlFor="StateList">State</label>
 				<select name='StateList' id='StateList'>
-					<option value='1'>val1</option>
-					<option value='2'>val2</option>
+					{stateList.map(state => <option key={state} value={state}>{state}</option>)}
 				</select>
 
 				<label htmlFor="TypeList">Type</label>
 				<select name='TypeList' id='TypeList'>
-					<option value='1'>val1</option>
-					<option value='2'>val2</option>
+					{parkTypeList.map(type => <option key={type} value={type}>{type}</option>)}
 				</select>
+				<input type='submit' />
 			</form>
+			<table>
+				<thead>
+					<tr>
+						{nationalParksData[0] && Object.keys(nationalParksData[0]).map(header => {
+							return <th key={header} value={header}>{header}</th>
+						})}
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+
+
+			</table>
+
 
 
 		</>

@@ -36,7 +36,7 @@ const Mountain = () => {
 				mountainChangeHandler={mountainChangeHandler}
 			/>
 			{filterMountainData && filterMountainData.name
-				? <MountainCard data={filterMountainData} />
+				? <MountainCard filterMountainData={filterMountainData} />
 				: null}
 		</section>
 	);

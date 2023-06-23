@@ -1,7 +1,7 @@
 import './MountainCard.css'
 
 
-const MountainCard = ({ data }) => {
+const MountainCard = ({ filterMountainData }) => {
 	const {
 		name,
 		elevation,
@@ -9,7 +9,7 @@ const MountainCard = ({ data }) => {
 		img,
 		desc,
 		coords: { lat, lng }
-	} = data
+	} = filterMountainData
 
 	return (
 		<div className="MountainCard">
